@@ -29,6 +29,9 @@
                             <wsdlUrls>
                                 <wsdlUrl>http://localhost:8080/services/freshmartCashCardService?wsdl</wsdlUrl>
                                 <wsdlUrl>http://localhost:8080/services/hello?wsdl</wsdlUrl>
+                                <wsdlUrl>http://localhost:8080/services/register?wsdl</wsdlUrl>
+                                <wsdlUrl>http://localhost:8080/services/profile?wsdl</wsdlUrl>
+                                <wsdlUrl>http://localhost:8080/services/freshmartCashCardService?wsdl</wsdlUrl>
                             </wsdlUrls>
                         </configuration>
                     </execution>
