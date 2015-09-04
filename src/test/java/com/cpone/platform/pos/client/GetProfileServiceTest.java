@@ -1,4 +1,4 @@
-package com.cpone.platform.pos.client.getprofile;
+package com.cpone.platform.pos.client;
 
 import com.cpone.platform.pos.client.CustomerDto;
 import com.cpone.platform.pos.client.GetProfileInputData;

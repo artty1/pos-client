@@ -1,4 +1,4 @@
-package com.cpone.platform.pos.client.register;
+package com.cpone.platform.pos.client;
 
 /**
  * Created by art_ty on 9/4/2015.
