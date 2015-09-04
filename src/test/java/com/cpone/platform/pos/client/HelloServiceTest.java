@@ -1,4 +1,4 @@
-package com.cpone.platform.pos.client.testcall;
+package com.cpone.platform.pos.client;
 
 import org.junit.After;
 import org.junit.Before;
