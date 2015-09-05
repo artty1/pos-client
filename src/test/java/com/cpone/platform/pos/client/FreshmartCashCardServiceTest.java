@@ -41,7 +41,7 @@ public class FreshmartCashCardServiceTest {
     private void createLogin(BindingProvider bindingProvider) {
        Map requestContext = bindingProvider.getRequestContext();
         requestContext.put(BindingProvider.USERNAME_PROPERTY, "fresh");
-        requestContext.put(BindingProvider.PASSWORD_PROPERTY, "passwords");
+        requestContext.put(BindingProvider.PASSWORD_PROPERTY, "password");
     }
     
 }

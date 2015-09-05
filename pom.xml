@@ -31,7 +31,7 @@
                                 <wsdlUrl>${host}/services/hello?wsdl</wsdlUrl>
                                 <wsdlUrl>${host}/services/register?wsdl</wsdlUrl>
                                 <wsdlUrl>${host}/services/profile?wsdl</wsdlUrl>
-                                <wsdlUrl>${host}/services/freshmartCashCardService?wsdl</wsdlUrl>
+
                             </wsdlUrls>
                         </configuration>
                     </execution>
