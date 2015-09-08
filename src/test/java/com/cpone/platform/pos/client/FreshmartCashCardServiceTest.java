@@ -29,13 +29,17 @@ public class FreshmartCashCardServiceTest {
     public void tearDown() {
     }
     
-    @Test(expected = Exception.class)
+    @Test
     public void testCall(){
         FreshmartCashCardService service = new FreshmartCashCardService();
         FreshmartCashCardServiceEndPoint freshmartCashCardServiceEndPointPort = service.getFreshmartCashCardServiceEndPointPort();
         createLogin((BindingProvider)freshmartCashCardServiceEndPointPort);
         RegisterCashCardData data = new RegisterCashCardData();
-        freshmartCashCardServiceEndPointPort.registerCpFreshmartCard(data);
+        try {
+            freshmartCashCardServiceEndPointPort.registerCpFreshmartCard(data);
+        } catch (ConstrainViolationException_Exception e) {
+            e.getFaultInfo().violations.forEach(v->System.out.println(v.propertyPath +" " +v.message));
+        }
     }
 
     private void createLogin(BindingProvider bindingProvider) {
