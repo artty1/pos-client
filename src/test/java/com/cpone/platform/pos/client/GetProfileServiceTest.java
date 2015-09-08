@@ -25,8 +25,13 @@ public class GetProfileServiceTest {
 
         createLogin((BindingProvider) port);
 
-        CustomerDto customerDto = port.getCustomer(getProfileInputData);
-        System.out.println("customerDto --->" + customerDto.getCustomerId());
+        try {
+            CustomerDto customerDto = port.getCustomer(getProfileInputData);
+        } catch (ConstrainViolationException_Exception e) {
+            //Use violation for render message to user.
+            e.getFaultInfo().getViolations();
+        }
+
     }
 
     private void createLogin(BindingProvider bindingProvider) {

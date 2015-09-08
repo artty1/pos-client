@@ -27,11 +27,16 @@
                             <verbose>true</verbose>
                             <xnocompile>true</xnocompile>
                             <wsdlUrls>
-                                <wsdlUrl>${host}/services/freshmartCashCardService?wsdl</wsdlUrl>
                                 <wsdlUrl>${host}/services/hello?wsdl</wsdlUrl>
                                 <wsdlUrl>${host}/services/register?wsdl</wsdlUrl>
                                 <wsdlUrl>${host}/services/profile?wsdl</wsdlUrl>
-
+                                <wsdlUrl>${host}/services/freshmartCashCardService?wsdl</wsdlUrl>
+                                <wsdlUrl>${host}/services/registerExtra?wsdl</wsdlUrl>
+                                <wsdlUrl>${host}/services/billPrint?wsdl</wsdlUrl>
+                                <wsdlUrl>${host}/services/cashVoucher?wsdl</wsdlUrl>
+                                <wsdlUrl>${host}/services/discountVoucher?wsdl</wsdlUrl>
+                                <wsdlUrl>${host}/services/useRewardCode?wsdl</wsdlUrl>
+                                <wsdlUrl>${host}/services/freePremium?wsdl</wsdlUrl>
                             </wsdlUrls>
                         </configuration>
                     </execution>
