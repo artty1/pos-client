@@ -49,6 +49,8 @@ public class RegisterServiceTest {
             port.register(registerDto);
         } catch (ParseException_Exception e) {
             e.printStackTrace();
+        } catch (ConstrainViolationException_Exception e){
+            e.printStackTrace();
         }
     }
 
