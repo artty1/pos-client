@@ -39,6 +39,8 @@ public class FreshmartCashCardServiceTest {
             freshmartCashCardServiceEndPointPort.registerCpFreshmartCard(data);
         } catch (ConstrainViolationException_Exception e) {
             e.getFaultInfo().violations.forEach(v->System.out.println(v.propertyPath +" " +v.message));
+        } catch (SystemException_Exception e){
+            e.getFaultInfo().getMessage();
         }
     }
 

@@ -3,22 +3,27 @@ package com.cpone.platform.pos.client;
 import org.junit.Test;
 
 import javax.xml.ws.BindingProvider;
+import java.math.BigInteger;
 import java.util.Map;
 
 /**
  * Created by art_ty on 9/9/2015.
  */
-public class PrintBillServiceTest {
+public class CashVoucherServiceTest {
 
     @Test
-    public void testCall(){
-        BillPrintService billPrintService = new BillPrintService();
-        BillPrintServiceEndpoint billPrintServiceEndpoint = billPrintService.getBillPrintServiceEndpointPort();
-        createLogin((BindingProvider) billPrintServiceEndpoint);
-        BillPrintDto billPrintDto = new BillPrintDto();
+    public void testCall() {
+
+        CashVoucherService cashVoucherService = new CashVoucherService();
+        CashVoucherServiceEndpoint cashVoucherServiceEndpoint = cashVoucherService.getCashVoucherServiceEndpointPort();
+        createLogin((BindingProvider) cashVoucherServiceEndpoint);
+
+        CashVoucherRequest cashVoucherRequest = new CashVoucherRequest();
+        cashVoucherRequest.setCustomerId(BigInteger.ONE);
+        cashVoucherRequest.setRewardCode("testPxf");
 
         try {
-            billPrintServiceEndpoint.printBill(billPrintDto);
+            cashVoucherServiceEndpoint.cashVoucher(cashVoucherRequest);
         } catch (ConstrainViolationException_Exception e) {
             //Use violation for render message to user.
             e.getFaultInfo().getViolations();

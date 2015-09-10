@@ -47,10 +47,12 @@ public class RegisterServiceTest {
 
         try {
             port.register(registerDto);
-        } catch (ParseException_Exception e) {
-            e.printStackTrace();
         } catch (ConstrainViolationException_Exception e){
-            e.printStackTrace();
+            //Use violation for render message to user.
+            e.getFaultInfo().getViolations();
+        }catch (SystemException_Exception e){
+            e.getFaultInfo().getMessage();
+
         }
     }
 
