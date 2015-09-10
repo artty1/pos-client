@@ -56,6 +56,7 @@ public class RegisterServiceTest {
         }
     }
 
+
     private void createLogin(BindingProvider bindingProvider) {
         Map requestContext = bindingProvider.getRequestContext();
         requestContext.put(BindingProvider.USERNAME_PROPERTY, "fresh");
