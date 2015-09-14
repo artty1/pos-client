@@ -20,15 +20,16 @@ public class UseRewardServiceTest {
         createLogin((BindingProvider) useRewardCodeServiceEndpoint);
 
         UseRewardRequest useRewardRequest = new UseRewardRequest();
-        useRewardRequest.setCustomerId(BigInteger.valueOf(Long.valueOf(1)));
+        useRewardRequest.setCustomerId(new Long(1));
         useRewardRequest.setRewardCode("testPrefixCode");
         SkuData skuData = new SkuData();
-        skuData.setSeq(BigInteger.valueOf(Long.valueOf(1)));
+        skuData.setSeq(new Long(1));
         skuData.setProductId("234");
         skuData.setAmount(BigDecimal.valueOf(Long.valueOf(20)));
-        skuData.setQty(BigInteger.valueOf(Long.valueOf(5)));
-        skuData.setUnitPrice(BigDecimal.valueOf(Long.valueOf(2)));
+        skuData.setQty(new Long(1));
 
+        skuData.setUnitPrice(BigDecimal.valueOf(Long.valueOf(2)));
+        skuData.setPromotionType(PromotionType.BULKSALE);
 
         useRewardRequest.getSkuDataList().add(skuData);
         try {
